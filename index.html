@@ -1,3 +1,41 @@
-<html>
-  
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>El rincón de eLeoH</title>
+
+    <meta name="description" content="Proyectos de eLeoH, como eLeoHDev, desarrollador de videojuegos, eLeoH16, en YouTube, y eLeoHObras, escritor de libros, cuentos, novelas y cómics o historietas">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./scr/icon.png">
+</head>
+
+<body>
+    <main>
+        <h1 class="neonText">El rincón de eLeoH</h1>
+        <div class="contents">
+            <div class="project-buttons">
+                <button data-project-id="proyecto1" class="project-button" >eLeoH16 (YouTube)</button>
+
+                <button data-project-id="proyecto2" class="project-button">eLeoHDev (videojuegos)</button>
+
+                <button data-project-id="proyecto3" class="project-button">eLeoHObras (escritor)</button>
+            </div>
+
+            <div id="project-details" class="project-details"></div>
+        </div>
+
+        <div class="floating-contact">
+            <button id="contactButton">Visualizar correo de contacto</button>
+            <a id="contactInfo" class="contact-info" href="mailto:contacto.eleoh16@gmail.com">contacto.eleoh16@gmail.com <i class="fa-solid fa-pencil"></i></a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
