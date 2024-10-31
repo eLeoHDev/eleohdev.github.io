@@ -22,7 +22,7 @@ const projects =
         proyecto3: 
             '<a class="pag-p" href="https://www.wattpad.com/user/eLeoHObras" target="_blank">CUENTOS Y NOVELAS <i class="fa-solid fa-arrow-up-right-from-square"></i></a>' +
             '<div class="social-icons">' +
-                    '<a href="https://tkz.one/@eleohdev"><i class="fab fa-mastodon"></i></a>' +
+                    '<a>ᴾʳᵒ́ˣᶦᵐᵃᵐᵉⁿᵗᵉ</a>' +
             '</div>'
     };
 
