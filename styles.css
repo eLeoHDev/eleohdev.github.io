@@ -1,222 +1,205 @@
-* 
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body
-{
+body {
     display: flex;
     justify-content: center;
     background-color: #242424;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
-main
-{
+main {
     text-align: center;
 }
 
-h1
-{
-    color: #ff5900;
+h1 {
+    color: #fff7f2;
     font-size: 46px;
     margin-top: 11px;
-    animation: flicker 2.3s infinite alternate;     
+    animation: flicker 2.3s infinite alternate;
+    font-family: 'Orbitron', sans-serif;
 }
 
-.neonText {
-    color: #fff;
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #ffce9f,
-      0 0 21px #ffc27d,
-      0 0 12px rgb(214, 86, 0),
-      0 0 21px rgb(255, 115, 0),
-      0 0 27px rgb(255, 123, 0),
-      0 0 32px rgb(255, 136, 0),
-      0 0 46px rgb(255, 153, 0);
-  }
+.neonText, h1 {
+    text-shadow: 0 0 7px #fff, 0 0 10px #ffce9f, 0 0 21px #ffc27d, 
+                 0 0 12px rgb(214, 86, 0), 0 0 21px rgb(255, 115, 0), 
+                 0 0 27px rgb(255, 123, 0), 0 0 32px rgb(255, 136, 0), 
+                 0 0 46px rgb(255, 153, 0);
+}
 
 @keyframes flicker {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
-      text-shadow:
-      0 0 7px #fff,
-      0 0 10px #ffce9f,
-      0 0 21px #ffc27d,
-      0 0 12px rgb(214, 86, 0),
-      0 0 21px rgb(255, 115, 0),
-      0 0 27px rgb(255, 123, 0),
-      0 0 32px rgb(255, 136, 0),
-      0 0 46px rgb(255, 153, 0);
+        text-shadow: 0 0 7px #fff, 0 0 10px #ffce9f, 0 0 21px #ffc27d, 
+                     0 0 12px rgb(214, 86, 0), 0 0 21px rgb(255, 115, 0), 
+                     0 0 27px rgb(255, 123, 0), 0 0 32px rgb(255, 136, 0), 
+                     0 0 46px rgb(255, 153, 0);
     }
     20%, 24%, 55% {       
-      text-shadow: none;
+        text-shadow: none;
     }
-  }
+}
 
-.project-buttons
-{
+.project-buttons, .floating-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.project-buttons {
     justify-content: center;
     margin-bottom: 20px;
     height: 100vh;
 }
 
-.project-button
-{
+.project-button {
     padding: 10px 20px;
     margin: 10px 0;
-    width: 230px;
-    border-color: #009ccc;
-    background-color: #242424;
+    min-width: max-content;
+    display: inline-flex;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    border: 1px solid #009ccc;
+    background-color: #00000000;
     color: #ebebeb;
     font-weight: bold;
     font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
 }
 
-.project-button:hover
-{
+.project-buttons > .project-button {
+    width: 100%;
+    text-align: center;
+}
+
+.project-button:hover {
     transform: scale(1.05);
     background-color: #333a3f;
+    box-shadow: 0 0 10px rgba(255, 115, 0, 0.7), 0 0 20px rgba(255, 115, 0, 0.5);
+    
 }
 
-.project-button.active
-{
+.project-button.active {
     background-color: #333536;
     border-color: #ff7300;
 }
 
-.project-details
-{
+.project-details {
     text-align: center;
     margin-top: auto;
     padding: 20px;
     width: 100%;
-    max-width: 600x;
-    opacity: 1;
+    max-width: 600px;
     border-top: 1px solid #009ccc;
 }
 
-.project-details .social-icons
-{
+.project-details a {
+    font-size: 22px;
+    color: #ff7b00;
+    text-decoration: none;
+    text-shadow: 0 0 8px #e09c60, 0 0 12px #cf9f73, 0 0 23px #ffe4c5;
+}
+
+.project-details a:hover {
+    color: #fff4eb;
+    letter-spacing: 0.105rem;
+    text-shadow: 0 0 8px #ffdab6, 0 0 12px #ff8819, 0 0 27px #fcb25d;
+}
+
+.project-details .social-icons {
     display: flex;
     justify-content: center;
     margin-top: 4px;
     gap: 32px;
 }
 
-.project-details a
-{
-    font-size: 22px;
-}
-
-.project-details .social-icons a
-{
+.project-details .social-icons a {
     font-size: 32px;
     color: #009ccc;
-    text-shadow:
-      0 0 16px #c4e1f3;
+    text-shadow: 0 0 16px #c4e1f3;
+    animation: pulse 2s infinite;
 }
 
-.pag-p i
-{
-    font-size: 0.7em;
-    vertical-align: super;
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
-.project-details a
-{
-    color: #ff7b00;
-    text-decoration: none;
-    text-shadow:
-      0 0 13px #ca650c,
-      0 0 19px #cf9f73,
-      0 0 23px #ffe4c5;
+.social-icons a:hover {
+    color: #c3f4ff;
+    text-shadow: 0 0 8px #00e4ff, 0 0 12px #00e4ff, 0 0 16px #00e4ff;
 }
 
-.project-details a:hover
-{
-    transform: scale(1.3);
-    color: #ffffff;
-    letter-spacing: .2rem;
-}
-
-
-
-/* Configuración de la estructura principal */
-
-.contents 
-{
+.contents {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Espacio entre botones y detalles */
+    justify-content: space-between;
     height: 80vh;
     width: 100%;
-    max-width: 600px; /* Ancho máximo opcional */
+    max-width: 600px;
 }
 
-.floating-contact 
-{
+.floating-contact {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-  }
-  
-  #contactButton 
-  {
+}
+
+#contactButton {
     background-color: #181818;
     color: #009ccc;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  #contactButton:hover 
-  {
-    background-color: #3b3b3b;
-  }
+    transition: background-color 0.2s;
+}
 
-  #contactInfo:hover
-  {
-    text-shadow:
-      0 0 13px #ca650c,
-      0 0 19px #cf9f73,
-      0 0 23px #ffe4c5;
-  }
-  /* Define la animación de aparición */
-@keyframes fadeIn 
-{
-    from { opacity: 0; }
-    to { opacity: 1; }
+#contactButton:hover {
+    background-color: #3b3b3b;
 }
-  
-  /* Define la animación de desaparición */
-@keyframes fadeOut 
-{
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-  
-  /* Aplica la animación de entrada al correo cuando se muestra */
-  .contact-info {
-    display: none; /* Oculto por defecto */
+
+.contact-info {
+    display: none;
     color: #ff7300;
-    text-decoration: none;
     font-weight: bold;
     margin-top: 5px;
     opacity: 0;
     animation: fadeIn 0.5s forwards;
-  }
-  
-  /* Aplica la animación de salida al botón cuando se oculta */
-  #contactButton.fade-out {
+}
+
+#contactInfo:hover
+{
+  text-shadow:
+    0 0 13px #ca650c,
+    0 0 19px #cf9f73,
+    0 0 23px #ffe4c5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#contactButton.fade-out {
     animation: fadeOut 0.5s forwards;
-  }
+}
+
+@media (max-width: 768px) {
+    .project-details {
+        padding-bottom: 64px;
+    }
+}
