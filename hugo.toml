@@ -1,0 +1,33 @@
+baseURL = 'https://eleohdev.github.io/'
+languageCode = 'es'
+title = 'eLeoLetras'
+theme = 'PaperMod'
+
+[pagination]
+pagerSize = 5
+
+[params]
+defaultTheme = "dark"
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+
+[menu]
+
+  [[menu.main]]
+  identifier = "cortos"
+  name = "Cortos"
+  url = "/cortos/"
+  weight = 10
+
+  [[menu.main]]
+  identifier = "cuentos"
+  name = "Cuentos"
+  url = "/cuentos/"
+  weight = 20
+
+  [[menu.main]]
+  identifier = "novelas"
+  name = "Novelas"
+  url = "/novelas/"
+  weight = 20
